@@ -8,7 +8,7 @@ function chillHop() {
     {
       name: "Flute",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
+        "https://uhdwallpapers.org/uploads/converted/19/08/03/huawei-mediapad-m6-stock-wallpaper-1024x1024_666874-mm-90.jpg",
       artist: "Impulse",
       audio: flute,
       color: ["#205950", "#2ab3bf"],
@@ -18,7 +18,7 @@ function chillHop() {
     {
       name: "Lowkey",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
+        "https://www.clearcanvas.ca/wp-content/uploads/2020/05/sunset-1024x1024.png",
       artist: "Impulse",
       audio: lowkey,
       color: ["#EF8EA9", "#ab417f"],
