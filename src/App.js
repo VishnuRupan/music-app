@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import "./styles/app.scss"
+import Song from "./components/Song"
+import Player from "./components/Player"
+import chillHop from "./data";
+import Library from './components/Library'
+import Nav from './components/Nav'
 
 function App() {
+
+  //state calls function that returns an array of objects
+  // songs holds the array
+  const[songs, setSongs] = useState(chillHop());
+  const[currentSong, setCurrentSong] = useState(songs[0]);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const[libraryStatus, setLibraryStatus] = useState(false);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${libraryStatus ? 'library-active' : ""}`}>
+      <Nav setLibraryStatus={setLibraryStatus} libraryStatus={libraryStatus} />
+      <Song currentSong={currentSong}  isPlaying={isPlaying}/>
+      <Player currentSong={currentSong} 
+              setCurrentSong={setCurrentSong}
+              songs={songs}
+              isPlaying={isPlaying} 
+              setIsPlaying={setIsPlaying}/>
+
+      <Library currentSong={currentSong} libraryStatus={libraryStatus} songs={songs} setCurrentSong={setCurrentSong} setSongs={setSongs}/>
     </div>
   );
 }
